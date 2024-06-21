@@ -1,6 +1,6 @@
 
 let attempts = 0;
-const solution = 'il vino bianco';
+const solution = 'ilvinobianco';
 const hints = [
     '_ _ _ _ _ _ _ _ _ _ _ _', // 0 lettere
     '_ _ v _ _ _ _ _ _ _ _ _', // 1 lettera
@@ -22,7 +22,7 @@ function verificaRisposta() {
     const result = document.getElementById('result');
     
     if (risposta === solution) {
-        result.innerHTML = `<p>Bravo BOF! Ti sei guadagnato un regalo: <a href="Regalo_Bof.pdf" target="_blank">Clicca qui per aprire il PDF</a></p>`;
+        result.innerHTML = `<p>Bravo BOF! Ti sei guadagnato un <a href="Regalo_Bof.pdf" target="_blank">regalo</a></p>`;
     } else {
         if (attempts < hints.length - 2) {
             attempts++;
@@ -31,7 +31,7 @@ function verificaRisposta() {
         }
 		else{
 			attempts++;
-			result.innerHTML = `<p>Sei imbarazzante, era "${hints[attempts]}". Tieni il tuo regalo: <a href="Regalo_Bof.pdf" target="_blank">Clicca qui per aprire il PDF</a></p>`;
+			result.innerHTML = `<p>Sei imbarazzante, era "${hints[attempts]}". Tieni il tuo <a href="Regalo_Bof.pdf" target="_blank">regalo</a></p>`;
 		}
         
     }
